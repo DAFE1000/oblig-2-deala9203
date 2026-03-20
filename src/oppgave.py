@@ -10,7 +10,7 @@ def g(x):
     return np.arctan(x) - 4/(1 + x**2)
 
 # Binærsøk for å finne rot
-a, b = 0, 5
+a, b = 1, 3
 for _ in range(100):
     mid = (a + b) / 2
     if g(a) * g(mid) <= 0:
