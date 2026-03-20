@@ -24,4 +24,17 @@ y_max = f(x_max)
 print(f"x_max = {x_max:.4f}")
 print(f"f(x_max) = {y_max:.4f}")
 
+# Plotting
+xs = np.linspace(0, 10, 400)
+ys = f(xs)
+
+plt.plot(xs, ys, label="f(x)")
+plt.scatter([x_max], [y_max], color="red", label="Toppunkt")
+plt.title("Plot av f(x) og toppunkt")
+plt.xlabel("x")
+plt.ylabel("f(x)")
+plt.legend()
+plt.grid(True)
+plt.show()
+
 
