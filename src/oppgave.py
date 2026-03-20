@@ -10,7 +10,7 @@ def g(x):
     return np.arctan(x) - 4/(1 + x**2)
 
 # Binærsøk for å finne rot
-a, b = 1.5, 2.5
+a, b = 1.5, 1.7
 for _ in range(100):
     mid = (a + b) / 2
     if g(a) * g(mid) <= 0:
@@ -35,6 +35,8 @@ plt.xlabel("x")
 plt.ylabel("f(x)")
 plt.legend()
 plt.grid(True)
+
+plt.savefig("plot.png")   # ← LAGRER BILDET
 plt.show()
 
 
